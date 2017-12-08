@@ -37,13 +37,9 @@ var correctCharacters = [];
 // If every letter in `chosenWord` word has been passed to this function, console.log "you guessed it"
 var checkForCharacter = function(character) {
   for(i=0;i<=character.length;i++){
-      if(i === chosenWord ){
-        return true console.log('true')
-      }
+
+
   }
 
 
 }
-
-
-checkForCharacter('hello')

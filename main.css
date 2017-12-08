@@ -1,0 +1,37 @@
+* {
+box-sizing: border-box;
+margin: 0 auto;
+font-weight: comic;
+}
+
+img {
+  max-width: 100%;
+}
+
+.jumbotron{
+  width: 70%;
+}
+
+#character{
+  text-align: center;
+  margin: 0 auto;
+  width: 50%
+}
+
+
+
+
+
+
+/*-------RESPONSIVE DESIGN-------*/
+/*-------Tablet Display-------*/
+
+@media screen and ( min-width: 545px ) {
+
+}
+
+/*-------Desktop Display-------*/
+
+@media screen and ( min-width: 769px ) {
+
+}
