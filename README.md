@@ -1,4 +1,4 @@
-## WordGame JavaScript
+##  Word Game 
 
 A javascript game that uses 100 most popular words in English.
 Create a function that accepts a single character argument
@@ -11,3 +11,4 @@ The function store and console.log every letter in `chosenWord` that has been pa
 every letter in `chosenWord` word has been passed to this function, console.log "you guessed it"
 
 
+## ScreenShot
