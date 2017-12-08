@@ -1,7 +1,7 @@
 ##  Word Game 
 
 A javascript game that uses 100 most popular words in English.
-Create a function that accepts a single character argument
+function that accepts a single character argument
 function checks the `chosenWord` for that character
 function return true if the character is in the given word
 function should return false if the character is not in the given word
