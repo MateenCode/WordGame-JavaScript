@@ -1,4 +1,7 @@
-// let display = document.querySelector('.display');
+let display = document.querySelector('.display');
+let guess = document.querySelector('#character');
+let textForm = document.querySelector('.textForm');
+
 
 var commonWords = [
   "the", "of", "and", "a", "to", "in", "is", "you", "that", "it", "he",
@@ -15,40 +18,50 @@ var commonWords = [
 ];
 
 
-var counter = 10;
-var triedCharacters = [];
-var correctCharacters = [];
 
+// Grabbing Random Word
 var chooseRandomWord = function(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 var chosenWord = chooseRandomWord(commonWords);
-
 console.log(chosenWord)
 
 
-// create 2 forloop 1 one for then guess another or chosen word then call forward in if else
 
 
 
-let guess = document.querySelector('#character');
-let textForm = document.querySelector('.textForm');
 
+// Function that submits the values
 textForm.addEventListener('submit', function(event) {
+
+  var counter = 10;
+  var triedCharacters = [];
+  var correctCharacters = [];
+
+
 
   event.preventDefault();
 
-    guess = character.value
+  guess = character.value
 
-    if(chosenWord === guess ){
-      console.log("true")
-    }
-    else{
 
-      console.log("false")
+
+  for (i = 0; i < chosenWord.length; i++) {
+    chosenWord[i]
+    for (z = 0; z < guess.length; z++) {
+      if (guess[z] === chosenWord[i]) {
+        correctCharacters.push(guess[z])
+        console.log("correct " + correctCharacters)
+      } else {
+        triedCharacters.push(guess[z])
+        console.log("incorrect " + triedCharacters)
+      }
+    };
   }
 
+
 })
+
 
 
 // Create a function that accepts a single character argument
