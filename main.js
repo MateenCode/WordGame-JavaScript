@@ -27,20 +27,26 @@ var chosenWord = chooseRandomWord(commonWords);
 console.log(chosenWord)
 
 
+// create 2 forloop 1 one for then guess another or chosen word then call forward in if else
 
-let character = document.querySelector('#character');
 
-character.addEventListener('keydown', function(event) {
 
-    character = event.target.value
+let guess = document.querySelector('#character');
+let textForm = document.querySelector('.textForm');
 
-    if(chosenWord === character ){
+textForm.addEventListener('submit', function(event) {
+
+  event.preventDefault();
+
+    guess = character.value
+
+    if(chosenWord === guess ){
       console.log("true")
     }
     else{
+
       console.log("false")
   }
-
 
 })
 
