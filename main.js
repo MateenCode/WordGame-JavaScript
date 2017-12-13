@@ -1,7 +1,6 @@
 let display = document.querySelector('.display');
-let guess = document.querySelector('#character');
+let guessQuerySelector = document.querySelector('#character');
 let textForm = document.querySelector('.textForm');
-
 
 var commonWords = [
   "the", "of", "and", "a", "to", "in", "is", "you", "that", "it", "he",
@@ -17,50 +16,38 @@ var commonWords = [
   "come", "made", "may", "part"
 ];
 
-
-
 // Grabbing Random Word
-var chooseRandomWord = function(array) {
+var getRandomWord = function(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
-var chosenWord = chooseRandomWord(commonWords);
-console.log(chosenWord)
 
-
-
-
-
+var randomWord = getRandomWord(commonWords);
+console.log('randomWord', randomWord);
 
 // Function that submits the values
 textForm.addEventListener('submit', function(event) {
+  event.preventDefault();
 
   var counter = 10;
   var triedCharacters = [];
   var correctCharacters = [];
 
+  var guessWord = guessQuerySelector.value;
+  var shorterWordlength = randomWord.length > guessWord.length ? guessWord.length : randomWord.length;
 
+  console.log('guessWord', guessWord);
 
-  event.preventDefault();
-
-  guess = character.value
-
-
-
-  for (i = 0; i < chosenWord.length; i++) {
-    chosenWord[i]
-    for (z = 0; z < guess.length; z++) {
-      if (guess[z] === chosenWord[i]) {
-        correctCharacters.push(guess[z])
+  for (i = 0; i < shorterWordlength; i++) {
+      if (guessWord[i] === randomWord[i]) {
+        correctCharacters.push(guessWord[i])
         console.log("correct " + correctCharacters)
       } else {
-        triedCharacters.push(guess[z])
+        triedCharacters.push(guessWord[i])
         console.log("incorrect " + triedCharacters)
       }
-    };
   }
-
-
 })
+
 
 
 
